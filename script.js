@@ -16,8 +16,10 @@ function seeDinos (a,...b) {
     console.log(a);
     console.log(b);
 };
-  
-seeDinos("Velociraptors", "Tyrannosaurus Rex", "Dilophosaurus");
+seeDinos(...jPDinos);
+// OR  
+// seeDinos("Velociraptors", "Tyrannosaurus Rex", "Dilophosaurus");
+
 /*
 DISPLAY:
 Velociraptors
@@ -63,6 +65,8 @@ const jurassicParkMovies =[
  console.log(five);
  console.log(six);
 */
+//! Incomplete:
+/*
 function seeJPMovies([one, two, three, four, five, six]) {
     console.log(one);
     console.log(two);
@@ -72,6 +76,24 @@ function seeJPMovies([one, two, three, four, five, six]) {
     console.log(six);
 };
 seeJPMovies(jurassicParkMovies);
+*/
+seeJPMovies = ({one, two, three} , {four, five, six}) => {
+    console.log(one);
+    console.log(two);
+    console.log(three);
+    console.log(four);
+    console.log(five);
+    console.log(six);
+}
+  seeJPMovies (...jurassicParkMovies);
+/* DISPLAY:   
+Jurassic Park  
+The Lost World: Jurassic Park
+Jurassic Park III
+Jurassic World
+Jurassic World: Fallen Kingdom
+Jurassic World: Dominion
+*/
 
 
 // When finished, create a repository in the “SpreadDestructFuncExercise” Folder as well as on GitHub. Add and commit everything in the SpreadDestructFuncExercise folder and push it up to your GitHub repository. Then paste the link to your GitHub repository page in the form.
